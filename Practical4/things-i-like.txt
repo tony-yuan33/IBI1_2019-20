@@ -1,0 +1,4 @@
+I like C++ very much
+I like PLT
+I like lambda calculus
+I like concrete mathmatics
