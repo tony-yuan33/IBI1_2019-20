@@ -1,0 +1,1 @@
+Generally things went smoothly. However, I don't understand where different branches of repo are stored locally.
