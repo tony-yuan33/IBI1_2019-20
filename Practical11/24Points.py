@@ -17,7 +17,7 @@ def is_24_points_solvable(numbers: list) -> (bool, int):
         return (numbers[0] == 24, 0)
     
     total_recursion_times = 1
-    for i in range(0, len(numbers)):
+    for i in range(len(numbers)):
         for j in range(i + 1, len(numbers)):
             add_numbers = numbers.copy()
             add_numbers[i] = numbers[i] + numbers[j]
@@ -73,16 +73,15 @@ def is_24_points_solvable(numbers: list) -> (bool, int):
 
 numbers = input("Please input numbers to compute 24: (use ',' to divide them)").split(',')
 
-i = 0
 is_valid_input = True
-while i != len(numbers):
+for i in range(len(numbers)):
     if not numbers[i].isnumeric() or not (1 <= int(numbers[i]) <= 23):
         print("Invalid input: input should be integers between 1 and 23.")
         is_valid_input = False
         break
     
     numbers[i] = int(numbers[i])
-    i += 1
+
 
 if is_valid_input:
     is_solvable, recursion_times = is_24_points_solvable(numbers)
