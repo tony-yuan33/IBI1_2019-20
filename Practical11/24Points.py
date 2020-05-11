@@ -16,14 +16,14 @@ def is_24_points_solvable(numbers: list) -> (bool, int):
     if len(numbers) == 1:
         return (numbers[0] == 24, 0)
     
-    total_recursion_times = 1
+    total_recursion_times = 0
     for i in range(len(numbers)):
         for j in range(i + 1, len(numbers)):
             add_numbers = numbers.copy()
             add_numbers[i] = numbers[i] + numbers[j]
             del add_numbers[j]
             is_solvable, recursion_times = is_24_points_solvable(add_numbers)
-            total_recursion_times += recursion_times
+            total_recursion_times += recursion_times + 1
             if is_solvable:
                 return (True, total_recursion_times)
 
@@ -31,7 +31,7 @@ def is_24_points_solvable(numbers: list) -> (bool, int):
             min1_numbers[i] = numbers[i] - numbers[j]
             del min1_numbers[j]
             is_solvable, recursion_times = is_24_points_solvable(min1_numbers)
-            total_recursion_times += recursion_times
+            total_recursion_times += recursion_times + 1
             if is_solvable:
                 return (True, total_recursion_times)
 
@@ -39,7 +39,7 @@ def is_24_points_solvable(numbers: list) -> (bool, int):
             min2_numbers[i] = numbers[j] - numbers[i]
             del min2_numbers[j]
             is_solvable, recursion_times = is_24_points_solvable(min2_numbers)
-            total_recursion_times += recursion_times
+            total_recursion_times += recursion_times + 1
             if is_solvable:
                 return (True, total_recursion_times)
             
@@ -47,7 +47,7 @@ def is_24_points_solvable(numbers: list) -> (bool, int):
             mul_numbers[i] = numbers[i] * numbers[j]
             del mul_numbers[j]
             is_solvable, recursion_times = is_24_points_solvable(mul_numbers)
-            total_recursion_times += recursion_times
+            total_recursion_times += recursion_times + 1
             if is_solvable:
                 return (True, total_recursion_times)
             
@@ -56,7 +56,7 @@ def is_24_points_solvable(numbers: list) -> (bool, int):
                 div1_numbers[i] = Fraction(numbers[i], numbers[j])
                 del div1_numbers[j]
                 is_solvable, recursion_times = is_24_points_solvable(div1_numbers)
-                total_recursion_times += recursion_times
+                total_recursion_times += recursion_times + 1
                 if is_solvable:
                     return (True, total_recursion_times)
             
@@ -65,7 +65,7 @@ def is_24_points_solvable(numbers: list) -> (bool, int):
                 div2_numbers[i] = Fraction(numbers[j], numbers[i])
                 del div2_numbers[j]
                 is_solvable, recursion_times = is_24_points_solvable(div2_numbers)
-                total_recursion_times += recursion_times
+                total_recursion_times += recursion_times + 1
                 if is_solvable:
                     return (True, total_recursion_times)
     
