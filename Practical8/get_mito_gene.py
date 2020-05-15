@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import re
 
-input_path = r"C:\Users\canch\Downloads\Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa"
+input_path = r"Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa"
 output_path = r"mito_gene.fa"
 
 with open(input_path, 'r') as in_file, open(output_path, 'w') as out_file:
