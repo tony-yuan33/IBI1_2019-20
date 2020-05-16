@@ -1,0 +1,11 @@
+The Practical session was prolonged by some obstables, but generally it went smoothly.
+It didn't take me long to devise the procedures with pseudocode, but obscure output bothered me and I spent much time looking up documentations to get familiar with APIs.
+For instance, the first SIR model sometimes produced level lines (all three categories of population stayed seemingly constant).
+I plowed through the documentation of np.random trying to figure out if something was wrong with the random number generator, until I finally realized that it was possible for patient zero to recover before they spread the disease to other people and cause a pandemic.
+It also took me a very long time to learn the argument specifications of pyplot functions in order to get the visuals right.
+When implementing spacial_SIR, I got the range of neibour indices wrong because I forgot that ranges are half-closed.
+After correcting this, the results in later time steps again confounded me: the colors looked as if there were random spots of susceptible people diffused in recovered ones.
+Again it took me a long time to realize that the color is not associated with specific values of the table, but rather the number of categories present in the table.
+To conclude, I think that I had few problems with programming, but was unfamiliar with APIs and their effects, which were, unfortunately, poorly covered by the Practical Guide.
+I do recognize the importance of reading manuals and documentation by oneself, but for tasks as simple as these this practice becomes a huge waste of time.
+I wonder if the course organisers could incorporate more detailed instructions, examples and explanations into the Guide so that we know what to learn and write.
