@@ -1,0 +1,15 @@
+Comparing SOD2_human (NP_000627.2) and SOD2_mouse (NP_038699.2)
+Score by BLOSUM62: 1091
+Percentage identity: 89.64%
+
+Comparing SOD2_human (NP_000627.2) and RandomSeq
+Score by BLOSUM62: -250
+Percentage identity: 5.41%
+
+Comparing SOD2_mouse (NP_038699.2) and RandomSeq
+Score by BLOSUM62: -250
+Percentage identity: 5.86%
+
+In terms of percentage identity, the mouse and human sequences are around 84% more similar compared to a random sequence.
+In terms of BLOSOM62 scores, the score of mouse and human is 1341 more than that of a random sequence.
+In sum, the SOD2 sequences of human and mouse are greatly similar, suggesting an evolutionarily common ancestor for the two species.
