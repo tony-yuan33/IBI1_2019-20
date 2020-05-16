@@ -1,0 +1,7 @@
+Question: How has COVID-19 worldwide death rate changed over time?
+Addressed in lines 46~58 of "covid.py".
+
+At first death rate remained close to 0, but suddenly rose in a scattered manner. Finally death rate rose steadily to around 5%.
+This is probably because in the beginning of the pandemic, there are few cases and deaths, the medical resources were abundant, and little attention was paid globally to detecting and reporting cases.
+But as the pandemic developed, some patients' conditions eventually deteriorated, resulting in deaths. At the same time, more people were rapidly being infected. Together, the death rate erradically elevated.
+Finally, most countries started detecting, reporting cases and admitting patients to hospital, generating more reliable data. In some regions, the pandemic overpressured the medical systems, reducing treatment effect.
