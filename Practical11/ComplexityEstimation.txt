@@ -1,0 +1,9 @@
+The worst-case scenario is easy; it happens when there is no solution at all.
+Had we chosen the values maliciously, all recursions will be executed.
+We hereby consider the recursively defined time complexity function T(n) with respect to the input size n == len(numbers).
+
+T(n) <= BinomialCoefficient(n, 2)(6 * T(n-1) + C[1] * n + C[2]) + C[3] = 3 * n * (n-1) * T(n-1) + D[0]n^2 * (n-1) + C[2] * n * (n-1) + C[3]
+
+where C[0], C[1], C[2], C[3] and D[0] are constants.
+We can expand the recursion in place and count the highest term (the first term): 3n(n-1) * 3(n-1)(n-2) * ... * 3*2*1 = 3^(n-1)(n!)^2/n.
+Therefore, T(n) = O(3^n (n!)^2/n) in terms of big-O notation.
